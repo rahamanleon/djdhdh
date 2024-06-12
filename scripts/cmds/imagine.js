@@ -35,7 +35,7 @@ module.exports = {
 
     if (event.threadID !== allowedTID && event.senderID !== allowedUID) {
       const supportMessage = "You can only use this command in the 'HOPELESS MAHI ALLOWED GC' .\nType `/supportgc` to join the Support Box! 🚀";
-      const errorMessage = LoL.\n\n" + supportMessage;
+      const errorMessage =\n\n" + supportMessage;
 
       return api.sendMessage(errorMessage, event.threadID, event.messageID);
     }
