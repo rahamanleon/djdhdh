@@ -1,7 +1,7 @@
 const axios = require("axios");
 const link = "https://noobs-api2.onrender.com/dipto"
 module.exports.config = {
-  name: "bby",
+  name: "baby",
   version: "1.0.0",
   role: 0, 
   author: "dipto", 
