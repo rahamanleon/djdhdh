@@ -1,7 +1,7 @@
 const axios = require("axios");
 const link = "https://nubs-apis.onrender.com"
 module.exports.config = {
-  name: "bby",
+  name: "baby",
   version: "1.0.0",
   role: 0, 
   author: "dipto", 
