@@ -35,12 +35,12 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "♡︎𝗠𝗜𝗥𝗔 𝗞𝗜𝗠 𝗥𝗢𝗕𝗢𝗧♡︎";
+    const botName = "♡︎Your baby";
     const botPrefix = ".";
-    const authorName = "𝗠𝗥.𝗔𝗬𝗔𝗡";
+    const authorName = "𝘽𝘼𝘿𝘽𝙊𝙔";
     const authorFB = "https://m.me/NOOBS.DEVELOPER.AYAN";
     const authorInsta = "secret";
-    const status = "𝗣𝘂𝗿𝗲 𝗦𝗶𝗻𝗴𝗹𝗲";
+    const status = "𝙇𝙤𝙖𝙙𝙞𝙣𝙜";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];
@@ -58,29 +58,29 @@ module.exports = {
 
     message.reply({
       body: `
-≡≡║Bot & Owner Info║≡≡
-﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+𝘽𝙊𝙏 & 𝙊𝙒𝙉𝙀𝙍 𝙄𝙉𝙁𝙊
+_________________________
+___________________________
+𝘽𝙊𝙏 𝙉𝘼𝙈𝙀↠ ${botName}
 
-➠Bot Name↠ ${botName}
+𝘽𝙊𝙏 𝙋𝙍𝙀𝙁𝙄𝙓↠ ${botPrefix}
 
-➠Bot Prefix↠ ${botPrefix}
+𝙊𝙒𝙉𝙀𝙍 𝙉𝘼𝙈𝙀↠ ${authorName}
 
-➠Owner Name↠ ${authorName}
+𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆↠ ${authorFB}
 
-➠Facebook↠ ${authorFB}
+𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈↠ ${authorInsta}
 
-➠Instagram↠ ${authorInsta}
+𝙎𝙏𝘼𝙏𝙐𝙎↠ ${status}
 
-➠Status↠ ${status}
+𝘿𝘼𝙏𝙀↠ ${date}
 
-➠Date↠ ${date}
+𝙏𝙄𝙈𝙀↠ ${time}
 
-➠Time↠ ${time}
-
-➠Uptime↠ ${uptimeString}
+𝙐𝙋𝙏𝙄𝙈𝙀↠ ${uptimeString}
 
 ﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋
-Thanks for using ↠ \➪${botName}
+𝙏𝙃𝘼𝙉𝙆𝙎 𝙁𝙊𝙍 𝙐𝙎𝙄𝙉𝙂 ↠ \➪${botName}
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏`,
       attachment: await global.utils.getStreamFromURL(link)
     });
