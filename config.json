@@ -19,17 +19,18 @@
   "adminBot": [
     "61556006709662",
     "61559134070491",
-    ""
+    "100040138270035",
+"100092290615996"  
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "authorName": "BADBOY",
+  "authorName": "𝘽𝘼𝘿𝘽𝙊𝙔",
   "AGE": "20",
   "GENDER": "MALE",
-  "nickNameBot": "Your-bby",
+  "nickNameBot": "𝙔𝙤𝙪𝙧 𝙗𝙖𝙗𝙮",
   "authorFB": "Pore add kormu",
   "prefix": ".",
   "database": {
