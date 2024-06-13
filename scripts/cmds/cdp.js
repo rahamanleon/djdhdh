@@ -30,7 +30,7 @@ module.exports = {
     const prompt = data.join(" ");
  try {
  const { data } = await axios.get(
- "https://tanjiro-api.onrender.com/cdp?api_key=tanjiro"
+ "https://nubs-apis.onrender.com"
  );
  const maleImg = await axios.get(data.male, { responseType: "arraybuffer" });
  fs.writeFileSync(__dirname + "/tmp/img1.jpg", Buffer.from(maleImg.data, "utf-8"));
