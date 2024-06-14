@@ -6,21 +6,24 @@ module.exports.config = {
   role: 0, 
   author: "dipto", 
   description: "better then all Sim simi with multiple conversation",
-  guide: { en:"[message]"},
+  usePrefix: true,
+  guide: "[message]",
   category: "ChatBots",
-  coolDowns: 5
+  coolDowns: 5,
 };
 module.exports.onReply = async function ({ api, event}) {
- //api.unsendMessage(handleReply.messageID);
   if (event.type == "message_reply") {
-  const reply = event.body.toLowerCase();
+  const reply = event.body.toLowerCase();;
   if (isNaN(reply)) {
-    const response = await axios.get(`${link}/baby?text=${encodeURIComponent(reply)}`)
-       const ok = response.data.reply;
+    const response = await axios.get(`${global.GoatBot.config.api}/baby?text=${encodeURIComponent(reply)}`)
+    const ok = response.data.reply;
+    if(response.data.react){
+      api.setMessageReaction(response.data.react, event.messageID, (err) => {}, true);
+    }
     await api.sendMessage(ok ,event.threadID,(error, info) => {
   global.GoatBot.onReply.set(info.messageID,{
-        commandName: this.config.name,
-        type: 'reply',
+    commandName: this.config.name,
+    type: 'reply',
     messageID: info.messageID,
     author: event.senderID,
     link: ok
@@ -36,8 +39,11 @@ module.exports.onStart = async function ({ api, args, event }) {
         "Please provide a question to answer\n\nExample:\nbaby ki koro",
   event.threadID,  event.messageID ); return;}
     if (dipto) {
-      const response = await axios.get(`${link}/baby?text=${dipto}`);
+      const response = await axios.get(`${global.GoatBot.config.api}/baby?text=${dipto}`);
          const mg = response.data.reply;
+      if(response.data.react){
+        api.setMessageReaction(response.data.react, event.messageID, (err) => {}, true);
+      }
       await api.sendMessage({body: mg ,},event.threadID,(error, info) => {
   global.GoatBot.onReply.set(info.messageID,{
         commandName: this.config.name,
