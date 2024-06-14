@@ -3,20 +3,19 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: "baby",
-    aliases: ["baby","bby" ],
+    aliases: ["baby", "bbe", "babe" ],
     version: "6.9.0",
     author: "dipto",
     countDown: 0,
     role: 0,
-    shortDescription: "Chat with bot",
-    longDescription: "Chat with bot",
+    description: "better then all sim simi",
     category: "chat",
     guide: {
-      en: "{pn}[anyMessage] teach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR remove [YourMessage] - [indexNumber] or msg or list OR edit [YourMessage] - [NewReply]"
+      en: "{pn}[anyMessage] OR\nteach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR\nteach [react] [YourMessage] - [react1], [react2], [react3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg [YourMessage] OR\nlist OR\nedit [YourMessage] - [NeeMessage]"
     }
   },
-onStart: async ({ api, event, args }) => {
-const link = "https://nubs-apis.onrender.com/baby";
+onStart: async ({ api, event, args ,usersData }) => {
+const link = `https://nobs-api.onrender.com/dipto`;
   const dipto = args.join(" ").toLowerCase();
       const uid = event.senderID;
       let command;
@@ -24,18 +23,18 @@ const link = "https://nubs-apis.onrender.com/baby";
       let final;
       try{
       if(!args[0]){
-        const ran = ["Bolo baby","hum","type help baby"];
+        const ran = ["Bolo baby","hum","type help baby","type !baby hi"];
         const r = ran[Math.floor(Math.random() * ran.length)];
     return api.sendMessage(r,event.threadID,event.messageID);
       }
-//-------------------------------------------//
+//-------------------------------------//
       else if (args[0] === 'remove') {
       const fina = dipto.replace("remove ", "");
             const respons = await axios.get(`${link}?remove=${fina}`);
             const dat = respons.data.message;
             api.sendMessage(`${dat}`, event.threadID, event.messageID);
         }
-      //------------------------------------//
+//------------------------------------//
     else if (args[0] === 'rm' && dipto.includes('-')) {
           const fina = dipto.replace("rm ", "");
          const fi = fina.split(' - ')[0]
@@ -44,22 +43,33 @@ const link = "https://nubs-apis.onrender.com/baby";
             const da = respons.data.message;
             api.sendMessage(`${da}`, event.threadID, event.messageID);
     }
-  //-------------------------------------//
-       else if (args[0] === 'list') {
+//-----------------------------------//
+else if (args[0] === 'list') {
             const respo = await axios.get(`${link}?list=all`);
             const d = respo.data.length;
-            api.sendMessage(`Total Teach = ${d}`, event.threadID, event.messageID);
+            const data = respo.data;
+Promise.all(data.teacher.teacherList.map(async (item, index) => {
+      const number = Object.keys(item)[0];
+      const value = item[number];
+      const userData = await usersData.get(number);
+      const name = userData.name; 
+      return { name, value };
+    })).then(teachers => {teachers.sort((a, b) => b.value - a.value);
+return teachers.map((teacher,index) => `${index + 1}/ ${teacher.name}: ${teacher.value}`).join('\n');
+    }).then(output =>
+      api.sendMessage(`Total Teach = ${d}\n\n👑 | List of Teachers of baby\n${output}`, event.threadID, event.messageID)
+    );
         }
-    //-------------------------------------//
+//-----------------------------------//
           else if (args[0] === 'msg' || args[0] === 'message') {
       const fuk = dipto.replace("msg ", "");
             const respo = await axios.get(`${link}?list=${fuk}`);
             const d = respo.data.data;
             api.sendMessage(`Message ${fuk} = ${d}`, event.threadID, event.messageID);
           }
-  //-------------------------------------//
+//----------------------------------//
         else if (args[0] === 'edit') {
-            const command = dipto.split(' - ')[1];
+ const command = dipto.split(' - ')[1];
             if (command.length < 2) {
                 return api.sendMessage('❌ | Invalid format! Use edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
             }
@@ -69,30 +79,46 @@ const link = "https://nubs-apis.onrender.com/baby";
         } 
  //-------------------------------------//
 
-        else if (args[0] === 'teach' && args[1] !== 'amar'){
+else if (args[0] === 'teach' && args[1] !== 'amar' && args[1] !== 'react'){
            command = dipto.split(' - ')[1];
           comd = dipto.split(' - ')[0];
           final = comd.replace("teach ", "");
                 if (command.length < 2) {
                 return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
             }
-            const re = await axios.get(`${link}?teach=${final}&reply=${command}`);
+            const re = await axios.get(`${link}?teach=${final}&reply=${command}&senderID=${uid}`);
             const tex = re.data.message;
-            api.sendMessage(`✅ Replies added ${tex}`, event.threadID, event.messageID);
+        const name = re.data.teacher
+const data = await usersData.get(name);
+      const teacher = data.name;
+          const teachs = re.data.teachs
+     api.sendMessage(`✅ Replies added ${tex}\nTeacher: ${teacher}\nTeachs: ${teachs}`, event.threadID, event.messageID);
         }
-  //-------------------------------------//
-    else if (args[0] === 'teach' && args[1] === 'amar'){
+//------------------------------------//
+else if (args[0] === 'teach' && args[1] === 'amar'){
          command = dipto.split(' - ')[1];
           comd = dipto.split(' - ')[0];
-          final = comd.replace("teach ", "");
+  final = comd.replace("teach ", "");
             if (command.length < 2) {
                 return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
             }
-            const re = await axios.get(`${link}?teach=${final}&senderID=${uid}&reply=${command}`);
+            const re = await axios.get(`${link}?teach=${final}&senderID=${uid}&reply=${command}&key=intro`);
             const tex = re.data.message;
             api.sendMessage(`✅ Replies added ${tex}`, event.threadID, event.messageID);
         }
-     //-------------------------------------//
+//------------------------------------//
+else if (args[0] === 'teach' && args[1] === 'react'){
+          command = dipto.split(' - ')[1];
+            comd = dipto.split(' - ')[0];
+      final = comd.replace("teach react ", "");
+              if (command.length < 2) {
+                  return api.sendMessage('❌ | Invalid format! Use [teach] [YourMessage] - [Reply1], [Reply2], [Reply3]... OR [teach] [react] [YourMessage] - [react1], [react2], [react3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
+              }
+              const re = await axios.get(`${link}?teach=${final}&react=${command}`);
+              const tex = re.data.message;
+              api.sendMessage(`✅ Replies added ${tex}`, event.threadID, event.messageID);
+          }
+//------------------------------------//
         else if (dipto.includes('amar name ki') || dipto.includes('amr nam ki') || dipto.includes('amar nam ki') || dipto.includes('amr name ki')){
         const response = await axios.get(`${link}?text=amar name ki&senderID=${uid}`);
         const data = response.data.reply;
@@ -109,4 +135,4 @@ const link = "https://nubs-apis.onrender.com/baby";
         api.sendMessage("Check console for error ",event.threadID,event.messageID);
       }
     }
-        }
+    }
