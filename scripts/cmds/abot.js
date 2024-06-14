@@ -1,5 +1,5 @@
 const axios = require("axios");
-const link = "https://nubs-apis.onrender.com"
+
 module.exports.config = {
   name: "bby",
   version: "1.0.0",
@@ -39,7 +39,7 @@ module.exports.onStart = async function ({ api, args, event }) {
         "Please provide a question to answer\n\nExample:\nbaby ki koro",
   event.threadID,  event.messageID ); return;}
     if (dipto) {
-      const response = await axios.get(`${global.GoatBot.config.api}/baby?text=${dipto}`);
+      const response = await axios.get(`${https://nobs-api.onrender.com/dipto/baby}/baby?text=${dipto}`);
          const mg = response.data.reply;
       if(response.data.react){
         api.setMessageReaction(response.data.react, event.messageID, (err) => {}, true);
