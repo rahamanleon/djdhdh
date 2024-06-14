@@ -1,5 +1,5 @@
 const axios = require("axios");
-const link = "https://nobs-api.onrender.com"
+const link = "https://nubs-apis.onrender.com"
 module.exports.config = {
   name: "bby",
   version: "1.0.0",
