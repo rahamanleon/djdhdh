@@ -4,7 +4,7 @@ module.exports = {
   config: {
     name: "mira",
     version: "6.9.0",
-    author: "MR.AYAN",
+    author: "Dipto",
     countDown: 0,
     role: 0,
     shortDescription: "Chat with bot",
@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 onStart: async ({ api, event, args }) => {
-const link = "https://noobs-api.onrender.com/dipto/baby";
+const link = "https://nobs-api.onrender.com/dipto/baby";
   const dipto = args.join(" ").toLowerCase();
       const uid = event.senderID;
       let command;
@@ -108,4 +108,4 @@ const link = "https://noobs-api.onrender.com/dipto/baby";
         api.sendMessage("Please check you api-!!",event.threadID,event.messageID);
       }
     }
-    } 
+      }
