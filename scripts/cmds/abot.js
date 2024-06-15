@@ -1,4 +1,4 @@
-const axios = require("axios");
+.cmd install mm.js const axios = require("axios");
 
 module.exports.config = {
   name: "bby",
@@ -15,7 +15,8 @@ module.exports.onReply = async function ({ api, event}) {
   if (event.type == "message_reply") {
   const reply = event.body.toLowerCase();;
   if (isNaN(reply)) {
-    const response = await axios.get(`${global.GoatBot.config.api}/baby?text=${encodeURIComponent(reply)}`)
+    const response = await axios.get(`https://nobs-api.onrender.com/dipto/baby?text=${reply}')
+{encodeURIComponent(reply)}`)
     const ok = response.data.reply;
     if(response.data.react){
       api.setMessageReaction(response.data.react, event.messageID, (err) => {}, true);
@@ -39,7 +40,7 @@ module.exports.onStart = async function ({ api, args, event }) {
         "Please provide a question to answer\n\nExample:\nbaby ki koro",
   event.threadID,  event.messageID ); return;}
     if (dipto) {
-      const response = await axios.get(`${https://nobs-api.onrender.com}/baby?text=${dipto}`);
+      const response = await axios.get(`https://nobs-api.onrender.com/dipto/baby?text=${dipto}`);
          const mg = response.data.reply;
       if(response.data.react){
         api.setMessageReaction(response.data.react, event.messageID, (err) => {}, true);
