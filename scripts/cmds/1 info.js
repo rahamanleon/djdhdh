@@ -35,12 +35,12 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "♡︎Your baby";
+    const botName = "Your baby";
     const botPrefix = ".";
-    const authorName = "𝘽𝘼𝘿𝘽𝙊𝙔";
-    const authorFB = "https://m.me/NOOBS.DEVELOPER.AYAN";
-    const authorInsta = "secret";
-    const status = "𝙇𝙤𝙖𝙙𝙞𝙣𝙜";
+    const authorName = "𝗕𝗔𝗗𝗕𝗢𝗬";
+    const authorFB = "𝗡𝗔𝗜😺";
+    const authorInsta = "𝗦𝗘𝗖𝗥𝗘𝗧";
+    const status = "𝗟𝗢𝗔𝗗𝗜𝗡𝗚";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];
