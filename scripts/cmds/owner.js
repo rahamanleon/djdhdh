@@ -16,12 +16,12 @@ config: {
   onStart: async function ({ api, event }) {
   try {
     const ownerInfo = {
-      name: '𝘽𝘼𝘿𝘽𝙊𝙔',
+      name: '𝗕𝗔𝗗𝗕𝗢𝗬',
       gender: 'Male',
       age: '20',
       height: 'secret',
-      facebookLink: '𝙐𝙎𝙀 𝙆𝙊𝙍𝙄 𝙉𝘼',
-      nick: '𝘽𝘼𝘿𝘽𝙊𝙔'
+      facebookLink: '𝗡𝗔𝗜😺',
+      nick: '𝗕𝗔𝗗𝗕𝗢𝗬'
     };
 
     const tmpFolderPath = path.join(__dirname, 'tmp');
