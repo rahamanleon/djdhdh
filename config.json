@@ -32,7 +32,7 @@
   "GENDER": "MALE",
   "nickNameBot": "𝙔𝙤𝙪𝙧 𝙗𝙖𝙗𝙮",
   "authorFB": "Pore add kormu",
-  "prefix": ".",
+  "prefix": "!",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
