@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `╔═══════════╗\n     𝙔𝙤𝙪𝙧 𝙗𝙖𝙗𝙮\n╚═══════════╝`;
+      msg += `___________\n     𝙔𝙤𝙪𝙧 𝙗𝙖𝙗𝙮\n___________`;
 
       for (const [name, value] of commands) {
           if (value.config.role > 1 && role < value.config.role) continue;
@@ -97,7 +97,7 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `━━━━━━━━━━━━━━━━━♡
+        const response = `━━━━━━━━━━━━━━━━━
    
    ➢  ♡𝐍𝐀𝐌𝐄♡ 
     ➠${configCommand.name}
@@ -113,7 +113,7 @@ module.exports = {
    ➢ 𝙐𝙎𝘼𝙂𝙀
      ➠ ${usage}
    ➢ 𝙉𝙊𝙏𝙀𝙎
-    scripts coding by bad.boy
+    scripts coding by 𝘽𝘼𝘿𝘽𝙊𝙔 
   ━━━━━━━━━━━━━━━━━━ꔪ`;
 
         await message.reply(response);
