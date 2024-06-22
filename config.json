@@ -43,15 +43,15 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "ayanbotbeluga@gmail.com",
-      "clientId": "335951889803-q0sqvpqjire12vl0c1drqpvq6trqe7qi.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04vKSsirtbMjRCgYIARAAGAQSNwF-L9Ir45Y2gJy6rg7wvfCbzF5fTFQxOhV83N6jQC-N5n6S-rNnEUgujiuWu4OvrLEbmELMcSI",
-      "apiKey": ""
+      "email": "itsehan208@gmail.com",
+      "clientId": "1021502973839-dargpljmbn9jtspsv9odndf3ehjkpghm.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04an7sEWacfFbCgYIARAAGAQSNwF-L9IrSMcYxNsUH4oEQ-g1qmFCqWcLmKABoD5X3VGpdJFR_ADSuhnd_e_vAMOFnOBYzuG21R4",
+      "apiKey": "AIzaSyC7TCAtIV8M_Zrm8YiCOwPcTFtPluYSv3w"
     },
     "gRecaptcha": {
-      "siteKey": "6LcEPTMpAAAAAKRhQmTp03g4rkq-U6jXs8E8rDf5",
-      "secretKey": "6LcEPTMpAAAAAKRhQmTp03g4rkq-U6jXs8E8rDf5"
+      "siteKey": "6LfooFspAAAAAF_4FiCe27dsKTlGUM4wzOAcpQCW",
+      "secretKey": "6LfooFspAAAAAImWj3Lkr_QSb9gItQetbV7pDKND"
     }
   },
   "dashBoard": {
