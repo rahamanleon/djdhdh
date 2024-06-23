@@ -1,4 +1,4 @@
-!cmd install gcm.js const axios = require("axios");
+const axios = require("axios");
 const baseApiUrl = async () => {
     const base = await axios.get(
         `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
@@ -28,7 +28,7 @@ module.exports = {
         version: "1.0",
         author: "Dipto",
         countDown: 5,
-        role: 0,
+        role: 2,
         description: "𝗚𝗲𝘁 𝗚𝗿𝗼𝘂𝗽 𝗜𝗺𝗮𝗴𝗲",
         category: "𝗜𝗠𝗔𝗚𝗘",
         guide: "{pn} --color [color] --bgcolor [color] --admincolor [color] --membercolor [color]",
