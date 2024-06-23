@@ -9,15 +9,15 @@ enjoy kanda cmd and shake your banana 7 times a day haha
 
 module.exports = {
 	config: {
-		name: "kda",
-		aliases: ["harny"],
+		name: "porn",
+		aliases: ["horny"],
 		version: "2.0",
 		author: "MR.AYAN",
 		countDown: 30,
 		role: 2,
 		shortDescription: "",
 		longDescription: "get kanda/p***n video hilake sojaa",
-		category: "𝟭𝟴+",
+		category: "18+",
 		guide: "{p}{n}",
 	},
 
