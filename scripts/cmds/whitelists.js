@@ -3,7 +3,7 @@ const { writeFileSync } = require("fs-extra");
 
 module.exports = {
   config: {
-    name: "whitelists",
+    name: "whitelist",
     version: "1.1",
     author: "Rahman Leon",
     countDown: 5,
@@ -29,7 +29,7 @@ module.exports = {
         '   {pn} [show | -s] <uid | @tag>: Show information about user in whitelist\n' +
         '   {pn} [toggle | -t]: Enable/Disable whitelist mode',
     },
-    aliases: ["wl"],
+    aliases: ["wlt"],
   },
 
   langs: {
