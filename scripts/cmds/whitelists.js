@@ -29,7 +29,7 @@ module.exports = {
         '   {pn} [show | -s] <uid | @tag>: Show information about user in whitelist\n' +
         '   {pn} [toggle | -t]: Enable/Disable whitelist mode',
     },
-    aliases: ["wlt"],
+    aliases: ["wl"],
   },
 
   langs: {
