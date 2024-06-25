@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/oapEhQg.gif" width="50" style="margin-right: 10px;"></a>
 </p>
 <h5 align="center">
-🔹Mohammad Ayan
+🔹BADBOY
 </h5>
 
 ## Introduction
