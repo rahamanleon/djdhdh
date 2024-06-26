@@ -1,54 +1,45 @@
-const DIG = require("discord-image-generation");
-const fs = require("fs-extra");
+const fs = require('fs');
+const path = require('path');
 
 module.exports = {
-  config: {
-    name: "deleting",
-    version: "1.0",
-    author: "𝐀𝐒𝐈𝐅 𝐱𝟔𝟗",
-    countDown: 1,
-    role: 0,
-    shortDescription: "Delete!",
-    longDescription: "",
-    category: "fun",
-    guide: "{pn} [mention|leave_blank]",
-    envConfig: {
-      deltaNext: 5
+	config: {
+		name: "del",
+		aliases: ["d"],
+		version: "1.0",
+		author: "Mimi",
+		countDown: 5,
+		role: 2,
+		shortDescription: "Delete file and folders",
+		longDescription: "Delete file",
+		category: "owner",
+		guide: "{pn}"
+	},
+
+
+  onStart: async function ({ args, message,event}) {
+ const permission = ["100037951718438","61559134070491"];
+    if (!permission.includes(event.senderID)) {
+      message.reply("You don't have enough permission to use this command. Only Super admin can use it.");
+      return;
     }
-  },
+    const commandName = args[0];
 
-  langs: {
-    vi: {
-      noTag: "Bạn phải tag người bạn muốn tát"
-    },
-    en: {
-      noTag: "You must tag the person you want to "
+    if (!commandName) {
+      return message.reply("Type the file name..");
     }
-  },
 
-  onStart: async function ({ event, message, usersData, args, getLang }) {
-    let mention = Object.keys(event.mentions)
-    let uid;
+    const filePath = path.join(__dirname, '..', 'cmds', `${commandName}`);
 
-    if (event.type == "message_reply") {
-      uid = event.messageReply.senderID
-    } else {
-      if (mention[0]) {
-        uid = mention[0]
+    try {
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath);
+        message.reply(`✅ | A command file has been deleted ${commandName} !!`);
       } else {
-        console.log(" jsjsj")
-        uid = event.senderID
+        message.reply(`command file ${commandName} unavailable!!`);
       }
+    } catch (err) {
+      console.error(err);
+      message.reply(`Cannot be deleted because ${commandName}: ${err.message}`);
     }
-
-    let url = await usersData.getAvatarUrl(uid)
-    let avt = await new DIG.Delete().getImage(url)
-
-    const pathSave = `${__dirname}/tmp/delete.png`;
-    fs.writeFileSync(pathSave, Buffer.from(avt));
-    // Send the image as a reply to the command message
-    message.reply({
-      attachment: fs.createReadStream(pathSave)
-    }, () => fs.unlinkSync(pathSave));
   }
 };
