@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   config: {
-    name: "bankv4",
+    name: "bank",
     version: "1.2",
     description: "Deposit or withdraw money from the bank and earn interest",
     guide: {
