@@ -1,4 +1,4 @@
-js const axios = require("axios");
+const axios = require("axios");
 
 const ytdl = require("ytdl-core");
 
