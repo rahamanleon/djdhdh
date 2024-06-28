@@ -3,10 +3,10 @@ const fs = require("fs-extra");
 
 module.exports = {
  config: {
- name: "cdp",
- aliases: ["coupledp"],
+ name: "copuledp",
+ aliases: ["cdp"],
  version: "1.0",
- author: "𝐀𝐒𝐈𝐅 𝐱𝟔𝟗",
+ author: "XyryllPanget",
  countDown: 5,
  role: 0,
  shortDescription: {
@@ -17,32 +17,26 @@ module.exports = {
  },
  category: "image",
  guide: {
- en: "{n}"
+ en: "{pn}"
  }
  },
 
-  onStart: async function(){},
-  onChat: async function({ message, event, args, commandName, api, usersData}) {
-    const input = event.body;
-          if(input && input.trim().toLowerCase().startsWith('cdp') ||     input && input.trim().toLowerCase().startsWith('coupledp')){
-           const data = input.split(" ");
-           data.shift();
-    const prompt = data.join(" ");
+ onStart: async function ({ api, event, args }) {
  try {
  const { data } = await axios.get(
- "https://nubs-apis.onrender.com"
+ "https://tanjiro-api.onrender.com/cdp?api_key=tanjiro"
  );
  const maleImg = await axios.get(data.male, { responseType: "arraybuffer" });
- fs.writeFileSync(__dirname + "/tmp/img1.jpg", Buffer.from(maleImg.data, "utf-8"));
+ fs.writeFileSync(__dirname + "/tmp/img1.png", Buffer.from(maleImg.data, "utf-8"));
  const femaleImg = await axios.get(data.female, { responseType: "arraybuffer" });
- fs.writeFileSync(__dirname + "/tmp/img2.jpg", Buffer.from(femaleImg.data, "utf-8"));
+ fs.writeFileSync(__dirname + "/tmp/img2.png", Buffer.from(femaleImg.data, "utf-8"));
 
  const msg = "「 Here's your pair Dp✨ 」";
  const allImages = [
- fs.createReadStream(__dirname + "/tmp/img1.jpg"),
- fs.createReadStream(__dirname + "/tmp/img2.jpg")
+ fs.createReadStream(__dirname + "/tmp/img1.png"),
+ fs.createReadStream(__dirname + "/tmp/img2.png")
  ];
-
+ 
  return api.sendMessage({
  body: msg,
  attachment: allImages
@@ -51,5 +45,4 @@ module.exports = {
  console.error(error);
  }
  }
-}
 };
