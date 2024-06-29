@@ -1,7 +1,7 @@
 module.exports = {
 	config: {
 		name: "nude2",
-		aliases: [""],
+		aliases: ["nude2"],
 		version: "1.0",
 		author: "BADBOY",
 		countDown: 5,
