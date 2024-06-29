@@ -1,11 +1,11 @@
 module.exports = {
 	config: {
-		name: "girl",
-		aliases: ["girl"],
+		name: "nude2",
+		aliases: [""],
 		version: "1.0",
-		author: "MR.AYAN",
+		author: "BADBOY",
 		countDown: 5,
-		role: 0,
+		role: 2,
 		shortDescription: "send you a girl photos",
 		longDescription: "",
 		category: "media",
