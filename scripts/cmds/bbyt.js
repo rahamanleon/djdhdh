@@ -1,9 +1,15 @@
 const axios = require('axios');
+const baseApiUrl = async () => {
+  const base = await axios.get(`https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`);
+    console.log(base.data.api)
+  return base.data.api;
+    
+}; 
 
 module.exports = {
   config: {
-    name: "babe",
-    aliases: ["bab", "bbe", "b" ],
+    name: "baby",
+    aliases: ["baby", "b", "babe" ],
     version: "6.9.0",
     author: "dipto",
     countDown: 0,
@@ -11,11 +17,11 @@ module.exports = {
     description: "better then all sim simi",
     category: "chat",
     guide: {
-      en: "{pn}[anyMessage] OR\nteach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR\nteach [react] [YourMessage] - [react1], [react2], [react3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg [YourMessage] OR\nlist OR\nedit [YourMessage] - [NeeMessage]"
+      en: "{pn}[anyMessage] OR\nteach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR\nteach [react] [YourMessage] - [react1], [react2], [react3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg [YourMessage] OR\nlist OR \nall OR\nedit [YourMessage] - [NeeMessage]"
     }
   },
 onStart: async ({ api, event, args ,usersData }) => {
-const link = `https://nobs-api.onrender.com/dipto/baby`;
+const link = `${await baseApiUrl()}/baby`;
   const dipto = args.join(" ").toLowerCase();
       const uid = event.senderID;
       let command;
@@ -44,22 +50,30 @@ const link = `https://nobs-api.onrender.com/dipto/baby`;
             api.sendMessage(`${da}`, event.threadID, event.messageID);
     }
 //-----------------------------------//
-else if (args[0] === 'list') {
+    else if (args[0] === 'list') {
+        if (args[1] === 'all') {
+            const res = await axios.get(`${link}?list=all`);
+            const data = res.data;
+         Promise.all(data.teacher.teacherList.map(async (item) => {
+                const number = Object.keys(item)[0];
+                const value = item[number];
+                const userData = await usersData.get(number);
+                const name = userData.name;
+                return { name, value };
+            })).then(teachers => {
+                teachers.sort((a, b) => b.value - a.value);
+                const output = teachers.map((teacher, index) => `${index + 1}/ ${teacher.name}: ${teacher.value}`).join('\n');
+                api.sendMessage(`Total Teach = ${data.length}\n\n👑 | List of Teachers of baby\n${output}`, event.threadID, event.messageID);
+            }).catch(error => {
+                console.error(error);
+                api.sendMessage(`Error fetching teacher data`, event.threadID, event.messageID);
+            });
+        } else {
             const respo = await axios.get(`${link}?list=all`);
             const d = respo.data.length;
-            const data = respo.data;
-Promise.all(data.teacher.teacherList.map(async (item, index) => {
-      const number = Object.keys(item)[0];
-      const value = item[number];
-      const userData = await usersData.get(number);
-      const name = userData.name; 
-      return { name, value };
-    })).then(teachers => {teachers.sort((a, b) => b.value - a.value);
-return teachers.map((teacher,index) => `${index + 1}/ ${teacher.name}: ${teacher.value}`).join('\n');
-    }).then(output =>
-      api.sendMessage(`Total Teach = ${d}\n\n👑 | List of Teachers of baby\n${output}`, event.threadID, event.messageID)
-    );
+            api.sendMessage(`Total Teach = ${d}`, event.threadID, event.messageID);
         }
+    }
 //-----------------------------------//
           else if (args[0] === 'msg' || args[0] === 'message') {
       const fuk = dipto.replace("msg ", "");
@@ -135,4 +149,4 @@ else if (args[0] === 'teach' && args[1] === 'react'){
         api.sendMessage("Check console for error ",event.threadID,event.messageID);
       }
     }
-    }
+              }
