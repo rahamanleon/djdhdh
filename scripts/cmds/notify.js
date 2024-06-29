@@ -2,10 +2,10 @@ const { getStreamsFromAttachment } = global.utils;
 
 module.exports = {
   config: {
-    name: "notice",
+    name: "notify",
     aliases: ["anounce", "notisend"],
     version: "1.5",
-    author: "Samir Thakuri",
+    author: "BADBOY",
     countDown: 5,
     role: 2,
     shortDescription: {
@@ -26,7 +26,7 @@ module.exports = {
   langs: {
     en: {
       missingMessage: "Please enter the message you want to send to all groups",
-      notification: "⩸ 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐓𝐈𝐎𝐍 𝐅𝐑𝐎𝐌 𝐎𝐖𝐍𝐄𝐑/𝐀𝐃𝐌𝐈𝐍 ⩸",
+      notification: "𝙉𝙤𝙩𝙞𝙛𝙞𝙘𝙖𝙩𝙞𝙤𝙣 𝙛𝙧𝙤𝙢 𝙗𝙖𝙙𝙗𝙤𝙮",
       sendingNotification: "Start sending notification from admin bot to %1 chat groups",
       sentNotification: "✅ Sent notification to %1 groups successfully",
       errorSendingNotification: "An error occurred while sending to %1 groups:\n%2"
