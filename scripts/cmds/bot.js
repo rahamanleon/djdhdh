@@ -2,7 +2,7 @@ module.exports = {
     config: {
         name: "bot",
         version: "1.0",
-        author: "MR.AYAN",
+        author: "BADBOY",
         countDown: 5,
         role: 0,
         shortDescription: "No Prefix",
@@ -15,6 +15,6 @@ onChat: async function({
     message,
     getLang
 }) {
-    if (event.body && event.body.toLowerCase() == "bot") return message.reply("Ami bot na amk baby bolba-!!😑");
+    if (event.body && event.body.toLowerCase() == "bot") return message.reply("𝗮𝗺𝗶 𝗯𝗼𝘁 𝗻𝗮 𝗮𝗺𝗮𝗸𝗲 𝗯𝗯𝘆 𝗯𝗼𝗹𝗯𝗮 👸");
 }
 }; 
