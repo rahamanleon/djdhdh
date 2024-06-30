@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   config: {
     name: "delete",
-    aliases: ["d"],
+    aliases: ["dlt"],
     version: "1.6",
     author: "Subash",
     countDown: 1,
