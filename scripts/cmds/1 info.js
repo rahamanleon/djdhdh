@@ -4,7 +4,7 @@ const moment = require('moment-timezone');
 module.exports = {
   config: {
     name: "info",
-    aliases: ["inf", "in4"],
+    aliases: ["owner", "admin"],
     version: "2.0",
     author: "MR.AYAN",
     countDown: 5,
@@ -35,19 +35,18 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = "Your baby";
+    const botName = "𝗬𝗼𝘂𝗿 𝗕𝗮𝗯𝘆";
     const botPrefix = ".";
     const authorName = "𝗕𝗔𝗗𝗕𝗢𝗬";
-    const authorFB = "𝗡𝗔𝗜😺";
-    const authorInsta = "𝗦𝗘𝗖𝗥𝗘𝗧";
-    const status = "𝗟𝗢𝗔𝗗𝗜𝗡𝗚";
+    const gender = "𝗠𝗮𝗹𝗲";
+    const relationship = "𝗦𝗲𝗰𝗿𝗲𝘁";
+    const authorFB = "𝗞𝘂𝗷𝗲 𝗱𝗲𝗸𝗵𝗼 𝗽𝗲𝘆𝗲 𝗷𝗮𝗶𝗯𝗮";
+    const status = "𝗛𝗮𝘁𝗲𝗿𝘀 𝗮𝗿𝗲 𝗺𝘆 𝗺𝗼𝘁𝗶𝘃𝗮𝘁𝗼𝗿𝘀";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/info.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];
 
     const now = moment().tz('Asia/Dhaka');
-    const date = now.format('MMMM Do YYYY');
-    const time = now.format('h:mm:ss A');
 
     const uptime = process.uptime();
     const seconds = Math.floor(uptime % 60);
@@ -58,30 +57,24 @@ module.exports = {
 
     message.reply({
       body: `
-𝘽𝙊𝙏 & 𝙊𝙒𝙉𝙀𝙍 𝙄𝙉𝙁𝙊
-_________________________
-___________________________
-𝘽𝙊𝙏 𝙉𝘼𝙈𝙀↠ ${botName}
+𝐀𝗱𝗺𝗶𝗻 𝐈𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻
 
-𝘽𝙊𝙏 𝙋𝙍𝙀𝙁𝙄𝙓↠ ${botPrefix}
+◊──────────────────◊
 
-𝙊𝙒𝙉𝙀𝙍 𝙉𝘼𝙈𝙀↠ ${authorName}
+          Name: ${authorName}
 
-𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆↠ ${authorFB}
+          Gender: ${gender}
 
-𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈↠ ${authorInsta}
+          Facebook: ${authorFB}
 
-𝙎𝙏𝘼𝙏𝙐𝙎↠ ${status}
+          relationship: ${relationship}
+   
+          Status: ${status}
 
-𝘿𝘼𝙏𝙀↠ ${date}
-
-𝙏𝙄𝙈𝙀↠ ${time}
-
-𝙐𝙋𝙏𝙄𝙈𝙀↠ ${uptimeString}
-
-﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋
-𝙏𝙃𝘼𝙉𝙆𝙎 𝙁𝙊𝙍 𝙐𝙎𝙄𝙉𝙂 ↠ \➪${botName}
-﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏`,
+   
+◊──────────────────◊
+Thanks for using : ${botName}
+`,
       attachment: await global.utils.getStreamFromURL(link)
     });
   }
