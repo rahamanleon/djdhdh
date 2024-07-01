@@ -195,7 +195,7 @@ module[_0xc31163(0x1e3)] = {
         'name': _0xc31163(0x1cb) + _0xc31163(0x1c9),
         'aliases': [
             _0xc31163(0x1ff),
-            'wlt'
+            'wt'
         ],
         'version': _0xc31163(0x1bd),
         'author': _0xc31163(0x1f7),
