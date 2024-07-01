@@ -50,7 +50,7 @@ async function sing(api, event, args, message) {
 
     writer.on('finish', () => {
       const audioStream = fs.createReadStream(filePath);
-      message.reply({ body: `✅𝐒𝐨𝐧𝐠 𝐒𝐞𝐧𝐝 𝐁𝐨𝐱 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥\n\n🔗 Playing: ${title}`, attachment: audioStream });
+      message.reply({ body: `𝙃𝙚𝙧𝙚'𝙨 𝙮𝙤𝙪𝙧 𝙨𝙤𝙣𝙜 𝙗𝙖𝙗𝙮 <😘\n\n✅ 𝙀𝙣𝙟𝙤𝙮 : ${title}`, attachment: audioStream });
       api.setMessageReaction("✅", event.messageID, () => {}, true);
     });
 
@@ -69,7 +69,7 @@ module.exports = {
     name: "sing",
     version: "1.0",
     aliases: ["sound", "song"],
-    author: "MR.AYAN",
+    author: "BADBOY",
     countDown: 10,
     role: 0,
     shortDescription: "play music from yt",
