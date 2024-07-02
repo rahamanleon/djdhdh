@@ -5,7 +5,7 @@ const { client } = global;
 module.exports = {
 	config: {
 		name: "whitelistonly",
-		aliases: ["wltonly", "onlywlst", "onlywhitelist"],
+		aliases: ["wlonly", "onlywlst", "onlywhitelist"],
 		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
