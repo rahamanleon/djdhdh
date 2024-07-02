@@ -5,7 +5,7 @@ const { client } = global;
 module.exports = {
   config: {
     name: "whiteliststhreadonly",
-    aliases: ["wtonly", "onlywlstt", "onlywhitelistthread"],
+    aliases: ["wltonly", "onlywlstt", "onlywhitelistthread"],
     version: "1.4",
     author: "NTKhang",
     countDown: 5,
