@@ -50,7 +50,7 @@ async function sing(api, event, args, message) {
 
     writer.on('finish', () => {
       const audioStream = fs.createReadStream(filePath);
-      message.reply({ body: `✅𝙃𝙚𝙧𝙚'𝙨 𝙮𝙤𝙪𝙧 𝙨𝙤𝙣𝙜  \n\n 🐤 | 𝗲𝙣𝙟𝙤𝙮 : ${title}`, attachment: audioStream });
+      message.reply({ body: `✅𝙃𝙚𝙧𝙚'𝙨 𝙮𝙤𝙪𝙧 𝙨𝙤𝙣𝙜 𝙗𝙖𝙗𝙮 \n\n 🐤 | 𝗲𝙣𝙟𝙤𝙮 : ${title}`, attachment: audioStream });
       api.setMessageReaction("✅", event.messageID, () => {}, true);
     });
 
