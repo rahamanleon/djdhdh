@@ -258,7 +258,7 @@ message.send(global.game[event.threadID].board)
 } else{message.reply("this one is already blocked")}
 
 } else{message.reply("reply from 1-9")}
-} else{message.reply("not your turn Baka") }
+} else{message.reply("🎮𝙉𝙚𝙭𝙩 𝙩𝙪𝙧𝙣 𝙗𝙖𝙗𝙮 ") }
 
 
 }
