@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   config: {
     name: "owner",
-    author: "𝗠𝗥.𝗔𝗬𝗔𝗡",
+    author: "𝗕𝗔𝗗𝗕𝗢𝗬",
     version: "2.0",
     cooldowns: 5,
     role: 0,
@@ -26,11 +26,11 @@ module.exports = {
         await api.sendMessage(loadingMessage, event.threadID);
 
         const ownerInfo = {
-          name: '𝗠𝗥.𝗔𝗬𝗔𝗡',
+          name: '𝗕𝗔𝗗𝗕𝗢𝗬',
           gender: '𝗠𝗮𝗹𝗲',
-          hobby: '𝗕𝗼𝘁 𝗰𝗼𝗱𝗶𝗻𝗴,𝗦𝘁𝗲𝗮𝗹𝗶𝗻𝗴 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀,𝗲𝘁𝗰..',
-          relationship: '𝗣𝘂𝗿𝗲 𝗦𝗶𝗻𝗴𝗹𝗲',
-          facebookLink: 'https://m.me/NOOBS.DEVELOPER.AYAN',
+          hobby: '𝗚𝗼𝗼𝗱 𝗵𝘂𝘀𝗯𝗮𝗻𝗱',
+          relationship: '𝗦𝗲𝗰𝗿𝗲𝘁',
+          facebookLink: '𝗿𝗼𝗰𝗸 𝗲𝘅𝗲',
           bio: '𝗛𝗮𝘁𝗲𝗿𝘀 𝗮𝗿𝗲 𝗺𝘆 𝗺𝗼𝘁𝗶𝘃𝗮𝘁𝗼𝗿𝘀'
         };
 
