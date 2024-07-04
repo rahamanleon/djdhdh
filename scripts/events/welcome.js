@@ -29,17 +29,15 @@ module.exports = {
 			welcomeMessage: "⚪⚫🟡🟢🔴🔵\n\n🤖 Thank you for inviting me! 🌟\n \n🚀 Let's get started! Here's some useful information:\n \n- Bot Prefix: %1\n \n- To discover the list of available commands, type: %1help\n \n📚 Need assistance or have questions? Feel free to reach out anytime. Enjoy your time in the group! 🌈✨",
 			multiple1: "you",
 			multiple2: "you guys",
-			defaultWelcomeMessage: `𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏
+			defaultWelcomeMessage: `🥰 𝗔𝗦𝗦𝗔𝗟𝗔𝗠𝗨𝗔𝗟𝗔𝗜𝗞𝗨𝗠 🥰
 
-{boxName}
+≛{userName}≛
 
-Dear {userName}
-   
-𝐄𝐱𝐜𝐢𝐭𝐞𝐝 𝐭𝐨 𝐡𝐚𝐯𝐞 𝐲𝐨𝐮 𝐣𝐨𝐢𝐧 𝐮𝐬! 𝐋𝐞𝐭'𝐬 𝐬𝐡𝐚𝐫𝐞 𝐢𝐝𝐞𝐚𝐬 𝐚𝐧𝐝 𝐜𝐨𝐧𝐧𝐞𝐜𝐭. 𝐅𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐣𝐮𝐦𝐩 𝐢𝐧 𝐚𝐧𝐲𝐭𝐢𝐦𝐞.😊👋
-
-𝐈 𝐡𝐨𝐩𝐞 𝐲𝐨𝐮 𝐰𝐢𝐥𝐥 𝐅𝐨𝐥𝐥𝐨𝐰 𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩 𝐫𝐮𝐥𝐞𝐬 𝐩𝐫𝐨𝐩𝐞𝐫𝐥𝐲
-
-𝐇𝐚𝐯𝐞 𝐚 𝐧𝐢𝐜𝐞 𝐦𝐨𝐫𝐧𝐢𝐧𝐠  😺`
+𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘆𝗼𝘂 𝘁𝗼 𝗼𝘂𝗿 🌟✨
+{boxName} 🌟✨
+𝗚𝗿𝗼𝘂𝗽
+𝗛𝗮𝘃𝗲 𝗮 𝗻𝗶𝗰𝗲 𝗲𝘃𝗲𝗻𝗶𝗻𝗴 😊
+⚠𝗜 𝗵𝗼𝗽𝗲 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗳𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗮𝗹𝗹 𝗴𝗿𝗼𝘂𝗽 𝗿𝘂𝗹𝗲𝘀♻`
 		}
 	},
 
