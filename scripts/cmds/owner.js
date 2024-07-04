@@ -22,11 +22,11 @@ module.exports = {
   },
   onStart: async function ({ api, event }) {
       try {
-        const loadingMessage = "✨Please Wait Loading Owner Information...";
+        const loadingMessage = "🐤𝗽𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁 𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝗼𝘄𝗻𝗲𝗿 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻...";
         await api.sendMessage(loadingMessage, event.threadID);
 
         const ownerInfo = {
-          name: '𝗕𝗔𝗗𝗕𝗢𝗬',
+          name: '𝗥𝗼𝗖𝗞 𝗘𝘅𝗘',
           gender: '𝗠𝗮𝗹𝗲',
           hobby: '𝗚𝗼𝗼𝗱 𝗵𝘂𝘀𝗯𝗮𝗻𝗱',
           relationship: '𝗦𝗲𝗰𝗿𝗲𝘁',
@@ -34,7 +34,7 @@ module.exports = {
           bio: '𝗛𝗮𝘁𝗲𝗿𝘀 𝗮𝗿𝗲 𝗺𝘆 𝗺𝗼𝘁𝗶𝘃𝗮𝘁𝗼𝗿𝘀'
         };
 
-        const videoUrl = 'https://i.imgur.com/JTwPWIq.jpeg';
+        const videoUrl = 'https://drive.google.com/uc?export=download&id=1-ENeRBaBNSHcxWHRrbalERERBtCLpVfh';
         const tmpFolderPath = path.join(__dirname, 'tmp');
 
         if (!fs.existsSync(tmpFolderPath)) {
