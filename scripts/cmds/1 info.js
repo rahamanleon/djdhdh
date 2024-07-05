@@ -37,7 +37,7 @@ module.exports = {
   sendInfo: async function (message) {
     const botName = "𝗬𝗼𝘂𝗿 𝗯𝗮𝗯𝘆";
     const botPrefix = "!";
-    const authorName = "𝗘𝘅𝗘 𝗕𝗔𝗗𝗕𝗢𝗬";
+    const authorName = "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘";
     const authorFB = "𝗹𝗼𝗮𝗱𝗶𝗻𝗴";
     const authorInsta = "𝗹𝗼𝗮𝗱𝗶𝗻𝗴";
     const relationship = "𝘀𝗲𝗰𝗿𝗲𝘁";
