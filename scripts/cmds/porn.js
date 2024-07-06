@@ -9,10 +9,9 @@ enjoy kanda cmd and shake your banana 7 times a day haha
 
 module.exports = {
 	config: {
-		name: "porn",
-		aliases: ["horny"],
+		name: "porn2",
 		version: "2.0",
-		author: "MR.AYAN",
+		author: "ROCK",
 		countDown: 30,
 		role: 2,
 		shortDescription: "",
@@ -161,7 +160,7 @@ module.exports = {
 
 		if (senderID !== null) {
 			message.reply({
-				body: '✅Box Send Kda Vdo Successful',
+				body: '✅𝙝𝙚𝙧𝙚 𝙮𝙤𝙪𝙧 𝙥𝙤𝙧𝙣 𝙫𝙞𝙙𝙚𝙤 𝙗𝙖𝙗𝙮',
 				attachment: await global.utils.getStreamFromURL(randomVideo),
 			});
 
