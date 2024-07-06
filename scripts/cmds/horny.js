@@ -26,7 +26,7 @@ module.exports = {
 		const senderID = event.senderID;
 
 		const loadingMessage = await message.reply({
-			body: "⏳| Please Wait...",
+			body: "𝙬𝙖𝙞𝙩 𝙠𝙤𝙧𝙤 𝙗𝙖𝙗𝙮 🥵",
 		});
 
 	const link = [
