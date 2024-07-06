@@ -7,7 +7,7 @@ module.exports = {
         name: "up",
         aliases: ["uptime", "upt"],
         version: "1.2",
-        author: "MR.AYAN",//**you needed my cmd but don't share this cmd***and original author fb I'd : https://m.me/NOOBS.DEVELOPER.AYAN **//
+        author: "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘",
         countDown: 5,
         role: 0,
         shortDescription: {
