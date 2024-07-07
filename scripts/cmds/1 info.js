@@ -6,7 +6,7 @@ module.exports = {
     name: "information",
     aliases: ["info", "in4"],
     version: "2.0",
-    author: "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘",
+    author: "𝗕𝗔𝗗𝗕𝗢𝗬",
     countDown: 5,
     role: 0, 
     shortDescription: {
@@ -37,7 +37,7 @@ module.exports = {
   sendInfo: async function (message) {
     const botName = "𝗬𝗼𝘂𝗿 𝗯𝗮𝗯𝘆";
     const botPrefix = "!";
-    const authorName = "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘";
+    const authorName = "𝗘𝘅𝗘 𝗕𝗔𝗗𝗕𝗢𝗬";
     const authorFB = "https://www.facebook.com/rockexe07";
     const authorInsta = "𝗹𝗼𝗮𝗱𝗶𝗻𝗴";
     const relationship = "𝘀𝗲𝗰𝗿𝗲𝘁";
@@ -80,7 +80,7 @@ __________________________
     Uptime: ${uptimeString}
 
 ______________________________
- 𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴: ${botName} 🐤
+𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴: ${botName} 🐤
 ______________________________`,
       attachment: await global.utils.getStreamFromURL(link)
     });
