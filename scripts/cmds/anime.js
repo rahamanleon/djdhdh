@@ -70,6 +70,17 @@ module.exports = {
       "https://drive.google.com/uc?export=download&id=1uuajuhhLPlLXlSRBdzmwGfIMAV6WwW5u",
       "https://drive.google.com/uc?export=download&id=10vuTl8ChI5W0Lys43oIPCq1aLNjSK1zD",
       "https://drive.google.com/uc?export=download&id=1wkoC5kbo4GuDEqoEXoz40DwZi6OMKiSI",
+      "https://drive.google.com/uc?export=download&id=11_ejNMuVpbbwN18pevgl65HgwT8badZC",
+      "https://drive.google.com/uc?export=download&id=11G7aAQxzq_cklzy-6C_UihgxWsRj0Wul",
+      "https://drive.google.com/uc?export=download&id=1154s7nD2-WeS9obuqQGbTGSmeoTHtdpe",
+      "https://drive.google.com/uc?export=download&id=11fH3XCFrJoiybU3VeoKfsUShLdphWhIW",
+      "https://drive.google.com/uc?export=download&id=11OYzZ1Wt0QyvxNW92ZkdkwRcQg_Iejt0",
+      "https://drive.google.com/uc?export=download&id=116Eg9n4sel9mieywe4i01DOf-dWdiP88",
+      "https://drive.google.com/uc?export=download&id=11fH3XCFrJoiybU3VeoKfsUShLdphWhIW",
+      "https://drive.google.com/uc?export=download&id=10x-ZVs_ntPRmiMNj6NQ3OzqyMpavvcLs",
+ 
+      
+      
       // Add more video links here
     ];
 
