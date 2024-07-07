@@ -1,13 +1,14 @@
 module.exports = {
   config: {
     name: "jynixff",
+    aliases: ["jff"],
     version: "1.0",
     author: "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘",
     countDown: 20,
     role: 0,
-    shortDescription: "get ff video",
-    longDescription: "get random ff video",
-    category: "firefire",
+    shortDescription: "get anime video",
+    longDescription: "get random anime video",
+    category: "anime",
     guide: "{pn} animevdo",
   },
 
@@ -21,19 +22,15 @@ module.exports = {
     });
 
     const link = [
+      "https://tinyurl.com/26fsew5k",// video credits xenoz (youtube)
       "https://tinyurl.com/268cp8o5",
       "https://tinyurl.com/26fyyetm",
       "https://tinyurl.com/28veqgst",
       "https://tinyurl.com/2c6dfpls",
       "https://tinyurl.com/27fkqtym",
       "https://tinyurl.com/25kwxgd2",
-      "https://tinyurl.com/2cv77p8u"
+      "https://tinyurl.com/2cv77p8u",
       "https://tinyurl.com/2b5g36vg",
-      "https://tinyurl.com/26fsew5k",
-
-      
-  
-      
       // Add more video links here
     ];
 
