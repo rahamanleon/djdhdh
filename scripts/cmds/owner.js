@@ -26,7 +26,7 @@ module.exports = {
         await api.sendMessage(loadingMessage, event.threadID);
 
         const ownerInfo = {
-          name: '"𝗘𝘅𝗘 𝗕𝗔𝗗𝗕𝗢𝗬',
+          name: '𝗘𝘅𝗘 𝗕𝗔𝗗𝗕𝗢𝗬',
           gender: '𝗠𝗮𝗹𝗲',
           hobby: '𝗕𝗲𝗶𝗻𝗴 𝗮 𝗴𝗼𝗼𝗱 𝗺𝗮𝗻 𝗮 𝗴𝗼𝗼𝗱 𝗳𝗮𝘁𝗵𝗲𝗿 𝗮𝗻𝗱 𝗮 𝗴𝗼𝗼𝗱 𝗵𝘂𝘀𝗯𝗮𝗻𝗱',
           relationship: '𝗦𝗲𝗰𝗿𝗲𝘁',
@@ -34,7 +34,7 @@ module.exports = {
           bio: '𝗛𝗮𝘁𝗲𝗿𝘀 𝗮𝗿𝗲 𝗺𝘆 𝗺𝗼𝘁𝗶𝘃𝗮𝘁𝗼𝗿𝘀'
         };
 
-        const videoUrl = 'https://drive.google.com/uc?export=download&id=1-ENeRBaBNSHcxWHRrbalERERBtCLpVfh';
+        const videoUrl = 'https://drive.google.com/uc?export=download&id=12aWud8Pnv44KisFsRISCTnVQpKZR1kss';
         const tmpFolderPath = path.join(__dirname, 'tmp');
 
         if (!fs.existsSync(tmpFolderPath)) {
