@@ -118,8 +118,8 @@
   "hideNotiMessage": {
     "wrongCommand": false,
     "adminOnly": false,
-    "threadBanned": true,
-    "userBanned": true
+    "threadBanned": false,
+    "userBanned": false
   },
   "logEvents": {
     "disableAll": false,
