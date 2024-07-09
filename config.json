@@ -28,7 +28,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "authorName": "𝗥𝗼𝗖𝗞 𝗘𝘅𝗘",
+  "authorName": "BADBOY",
   "AGE": "20",
   "GENDER": "MALE",
   "nickNameBot": "𝙔𝙤𝙪𝙧 𝙗𝙖𝙗𝙮",
@@ -118,8 +118,8 @@
   "hideNotiMessage": {
     "wrongCommand": false,
     "adminOnly": false,
-    "threadBanned": false,
-    "userBanned": false
+    "threadBanned": true,
+    "userBanned": true
   },
   "logEvents": {
     "disableAll": false,
