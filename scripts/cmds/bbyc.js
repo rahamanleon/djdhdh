@@ -7,7 +7,7 @@ const baseApiUrl = async () => {
 
 module.exports.config = {
   name: "bby",
-  aliases: ["janu"],
+  aliases: ["janu","bot","বাবু","বেবি"],
   version: "1.0.0",
   role: 0,
   author: "dipto", //modified by xnil
