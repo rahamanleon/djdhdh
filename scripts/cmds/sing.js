@@ -68,7 +68,7 @@ module.exports = {
   config: {
     name: "sing",
     version: "1.0",
-    aliases: ["sound", "song"],
+    aliases: ["sound"],
     author: "BADBOY",
     countDown: 10,
     role: 0,
