@@ -6,9 +6,9 @@ const tinyurl = require('tinyurl');
 
 module.exports = {
   config: {
-    name: "song",
+    name: "song2",
     version: "1.3",
-    author: "𝗔𝗬𝗔𝗡 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬",
+    author: "BADBOY",
     countDown: 5,
     role: 0,
     category: "cute",
