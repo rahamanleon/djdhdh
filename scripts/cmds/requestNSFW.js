@@ -39,7 +39,7 @@ module.exports = {
     if (fs.existsSync(pendingIDsPath)) {
       const pendingIDs = JSON.parse(fs.readFileSync(pendingIDsPath));
       if (pendingIDs.includes(threadID)) {
-        const pendingMsg = `╔════ஜ۩۞۩ஜ═══╗\n\nYour request is already in pending.... \nPlease Contact: 𝐀𝐒𝐈𝐅 𝐱𝟔𝟗 for fast approval.\nFB: https://facebook.com/4S1F.403\n\n or join the support box for help \nType : ${p}support or ${p}supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
+        const pendingMsg = `╔════ஜ۩۞۩ஜ═══╗\n\nYour request is already in pending.... \nPlease Contact: BADBOY for fast approval.\nFB: https://www.facebook.com/rockexe07\n\n or join the support box for help \nType : ${p}support or ${p}supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
         api.sendMessage(pendingMsg, threadID);
         return;
       }
@@ -67,7 +67,7 @@ for (const adminID of config.DEV) {
 }
 
 
-    const notifyMsg = `╔════ஜ۩۞۩ஜ═══╗\n\n✅Your approval request has been sent to admin 𝐀𝐒𝐈𝐅 𝐱𝟔𝟗 with this\nmessage: ${userMessage}.\n\n I will notify you if your thread is approved. Please wait until then.\n\n join the support box for fast approve \ntype : ${p} support or ${p} supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
+    const notifyMsg = `╔════ஜ۩۞۩ஜ═══╗\n\n✅Your approval request has been sent to admin BADBOY with this\nmessage: ${userMessage}.\n\n I will notify you if your thread is approved. Please wait until then.\n\n join the support box for fast approve \ntype : ${p} support or ${p} supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
     api.sendMessage(notifyMsg, threadID);
   }
 };
