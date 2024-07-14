@@ -32,8 +32,8 @@ module.exports = {
     return api.sendMessage("Please provide a message with your request.", threadID);
   }
 
-  const adminID = "100083900196039";
-  const threadToReceiveID = "6782682951779372";
+  const adminID = "61559134070491";
+  const threadToReceiveID = "7460623087375340";
 
   const userInfo = await api.getUserInfo([senderID]);
   const senderName = userInfo[senderID].name;
