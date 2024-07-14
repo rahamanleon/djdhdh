@@ -4,9 +4,9 @@ const fs = require('fs');
 module.exports = {
   config: {
     name: "ass",
-    author: "MR.AYAN",
+    author: "BADBOY",
     countDown: 5,
-    category: "test"
+    category: "18+"
   },
   onStart: async function({ event, message }) {
     try {
