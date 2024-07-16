@@ -39,7 +39,22 @@
 "api": "https://www.noobs-api.000.pe/dipto",
     "whiteListMode": {
     "enable": false,
-    "whiteListIds": [],
+    "whiteListIds":
+   [
+"61553540837688", 
+"61557050402467",
+"61559568644483",
+"100045823417357",
+"61554110124036",
+"61554884616710",
+"61557402606379",
+"61559546799328",
+"100037951718438",
+"100083394553014",
+"61558575364890",
+"100004424886360",
+"61559996382960"   
+   ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "authorName": "BADBOY",
@@ -160,7 +175,16 @@
   },
     "whiteListModeThread": {
     "enable": true,
-    "whiteListThreadIds": ["25768658329444254"],
+    "whiteListThreadIds":
+    ["25768658329444254",
+     "7449821955104081",
+     "7685476004885025",
+     "7961641163896188",
+     "8203475629704255",
+     "8013163912041730",
+     "8638336126182563",
+     "7422640444483629"
+    ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
