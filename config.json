@@ -38,7 +38,7 @@
   ],
 "api": "https://www.noobs-api.000.pe/dipto",
     "whiteListMode": {
-    "enable": false,
+    "enable": true,
     "whiteListIds":
    [
 "61553540837688", 
