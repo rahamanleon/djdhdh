@@ -6,7 +6,7 @@ const baseApiUrl = async () => {
 };
 
 module.exports.config = {
-  name: "baby",
+  name: "বেবি",
   version: "1.0.0",
   role: 0,
   author: "dipto", //modified by xnil
@@ -50,7 +50,7 @@ module.exports.onReply = async function ({ api, event }) {
 
 module.exports.onChat = async function ({ event, api }) {
   const body = event.body && event.body.toLowerCase().trim();
-  if (body === "baby") {
+  if (body === "বেবি") {
 const msgs = ["𝗕𝗲𝘀𝗵𝗶 𝗱𝗮𝗸𝗹𝗲 𝗮𝗺𝗺𝘂 𝗯𝗼𝗸𝗮 𝗱𝗲𝗯𝗮 𝘁𝗼__🥺",
         "𝗕𝗯𝘆 না জানু, বল 😌",
         "বেশি bby Bbby করলে leave নিবো কিন্তু 😒😒",
@@ -112,7 +112,7 @@ api.sendMessage(rMsg, event.threadID, (error, info) => {
               });
             }
           }, event.messageID);
-  } else if (body.startsWith("baby ")) {
+  } else if (body.startsWith("বেবি ")) {
     const query = body.slice(4).trim();
     if (query) {
       try {
