@@ -66,9 +66,8 @@ async function sing(api, event, args, message) {
 
 module.exports = {
   config: {
-    name: "sing",
+    name: "sing2",
     version: "1.0",
-    aliases: ["sound"],
     author: "BADBOY",
     countDown: 10,
     role: 0,
