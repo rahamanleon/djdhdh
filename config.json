@@ -21,14 +21,15 @@
     "100040138270035",
     "100037951718438",
     "61556006709662",
-    "100092290615996"
-  ], 
- 
-"GOD": [
+    "100092290615996"], 
+
+  },	
+  "GOD": [
     "61559134070491",
+    ""
   ],
 	
-	"api": "https://www.noobs-api.000.pe/dipto",
+"api": "https://www.noobs-api.000.pe/dipto",
     "whiteListMode": {
     "enable": true,
     "whiteListIds":
