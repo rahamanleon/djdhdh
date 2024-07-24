@@ -3,9 +3,10 @@ const request = require("request");
 
 module.exports = {
 config: {
-    name: "boxinfo",
+    name: "gcinfo",
+    aliases:"boxinfo","groupinfo",
     version: "1.0",
-    author: "MR.AYAN",//** original author fb I'd : https://m.me/NOOBS.DEVELOPER.AYAN **//
+    author: "BADBOYシ",
     countDown: 5,
     role: 0,
     shortDescription: "See Info box",
