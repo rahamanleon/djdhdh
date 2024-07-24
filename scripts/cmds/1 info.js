@@ -63,7 +63,7 @@ __________________________
 
     Bot Name: ${botName}
 
-    Bot Prefix: ${botPrefix}
+    bot Prefix: ${botPrefix}
 
     Owner Name: ${authorName}
   
@@ -80,7 +80,7 @@ __________________________
     Uptime: ${uptimeString}
 
 ______________________________
-𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴: ${botName} 🐤
+Thanks for using: ${botName} 🐤
 ______________________________`,
       attachment: await global.utils.getStreamFromURL(link)
     });
