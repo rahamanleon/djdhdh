@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports = {
 	config: {
-		name: "font2",
+		name: "font",
 		version: "1.0",
 		author: "Aryan Chauhan",
 		countDown: 0,
@@ -14,7 +14,7 @@ module.exports = {
 		guide: "{pn}"
 	},
 	onStart: async function({ event, api, args }) {
-		const vipData = global.GoatBot.config.vipUser;
+		const vipData = global.GoatBot.config.DEV;
 			if (!vipData.includes(event.senderID)) {
 				api.sendMessage(
 					"⛔ 𝗩𝗜𝗣 𝗔𝗟𝗘𝗥𝗧 ⛔\n\n⚠ 𝗔𝗟𝗘𝗥𝗧 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡\n 🚫 You are not a VIP user.", event.threadID, event.messageID);
