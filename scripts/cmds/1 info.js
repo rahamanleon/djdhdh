@@ -4,7 +4,7 @@ const moment = require('moment-timezone');
 module.exports = {
   config: {
     name: "information",
-    aliases: ["info", "in4"],
+    aliases: ["info", "botinfo", "babyinfo"],
     version: "2.0",
     author: "𝗕𝗔𝗗𝗕𝗢𝗬",
     countDown: 5,
@@ -38,7 +38,7 @@ module.exports = {
     const botName = "𝗬𝗼𝘂𝗿 𝗯𝗮𝗯𝘆";
     const botPrefix = "!";
     const authorName = "𝗘𝘅𝗘 𝗕𝗔𝗗𝗕𝗢𝗬";
-    const authorFB = "https://www.facebook.com/rockexe07";
+    const authorFB = "https://www.facebook.com/rockexe007";
     const authorInsta = "𝗹𝗼𝗮𝗱𝗶𝗻𝗴";
     const relationship = "𝘀𝗲𝗰𝗿𝗲𝘁";
 
