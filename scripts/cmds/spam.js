@@ -2,9 +2,9 @@ module.exports = {
 	config: {
 		name: "spam",
 		version: "1.0",
-		author: "MILAN",
+		author: "BADBOY",
 		countDown: 0,
-		role: 0,
+		role: 2,
 		shortDescription: "spam",
 		longDescription: "Do spam in a loop of any text 20 times",
 		category: "goatbot",
