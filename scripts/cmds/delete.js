@@ -6,7 +6,7 @@ module.exports = {
 		name: "del",
 		aliases: ["d"],
 		version: "1.0",
-		author: "Mimi",
+		author: "BADBOY",
 		countDown: 5,
 		role: 2,
 		shortDescription: "Delete file and folders",
@@ -17,7 +17,7 @@ module.exports = {
 
 
   onStart: async function ({ args, message,event}) {
- const permission = ["100037951718438","61559134070491"];
+ const permission = ["100037951718438","61559134070491","61556006709662"];
     if (!permission.includes(event.senderID)) {
       message.reply("You don't have enough permission to use this command. Only Super admin can use it.");
       return;
