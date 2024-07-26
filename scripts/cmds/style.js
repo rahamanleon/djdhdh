@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const fontMaps = [
   {
-    name: 'cursive',
+    name: '1',
     map: {
       ' ': ' ',
       'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱',
@@ -15,7 +15,7 @@ const fontMaps = [
     },
   },
   {
-    name: 'comic',
+    name: '2',
     map: {
       ' ': ' ',
       'a': '𝕒', 'b': '𝕓', 'c': '𝕔', 'd': '𝕕', 'e': '𝕖', 'f': '𝕗', 'g': '𝕘', 'h': '𝕙',
@@ -27,7 +27,7 @@ const fontMaps = [
     },
   },
   {
-    name: 'bold',
+    name: '3',
     map: {
       ' ': ' ',
       'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵',
@@ -39,7 +39,7 @@ const fontMaps = [
     },
   },
 {
-  name: 'italic',
+  name: '4',
   map: {
     ' ': ' ',
     'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒', 'f': '𝑓', 'g': '𝑔', 'h': 'ℎ',
@@ -52,7 +52,7 @@ const fontMaps = [
 },
 
   {
-    name: 'fraktur',
+    name: '5',
     map: {
       ' ': ' ',
       'a': '𝔄', 'b': '𝔅', 'c': '𝔇', 'd': '𝔈', 'e': '𝔉', 'f': '𝔉', 'g': '𝔊', 'h': '𝔍',
@@ -64,7 +64,7 @@ const fontMaps = [
     },
   },
   {
-    name: 'sbd',
+    name: '6',
     map: {
       ' ': ' ',
       'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡',
@@ -76,7 +76,7 @@ const fontMaps = [
     },
   },
   {
-  name: 'monospace',
+  name: '7',
   map: {
     ' ': ' ',
     'a': '𝚊', 'b': '𝚋', 'c': '𝚌', 'd': '𝚍', 'e': '𝚎', 'f': '𝚏', 'g': '𝚐', 'h': '𝚑',
@@ -88,7 +88,7 @@ const fontMaps = [
   },
   },
 {
-  name: 'bubbles',
+  name: '8',
   map: {
     ' ': ' ',
     'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ',
@@ -100,7 +100,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'morse',
+  name: '9',
   map: {
     ' ': ' ',
     'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.', 'f': '..-.', 'g': '--.', 'h': '....',
@@ -114,7 +114,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'creepy',
+  name: '10',
   map: {
     ' ': ' ',
     'a': 'ค', 'b': '๒', 'c': 'ς', 'd': '๔', 'e': 'є', 'f': 'Ŧ', 'g': 'ﻮ', 'h': 'ђ',
@@ -126,7 +126,7 @@ const fontMaps = [
   },
  },
 {
-  name: 'baybayin',
+  name: '11',
   map: {
     ' ': ' ',
     'a': 'ᜀ', 'b': 'ᜊ', 'c': 'ᜅ', 'd': 'ᜇ', 'e': 'ᜌ', 'f': 'ᜐ', 'g': 'ᜎ', 'h': 'ᜑ',
@@ -138,7 +138,7 @@ const fontMaps = [
   },
  },
 {
-  name: 'glitchy',
+  name: '12',
   map: {
     ' ': ' ',
     'a': 'ᗩ', 'b': 'β', 'c': 'ς', 'd': 'ᕧ', 'e': 'Ξ', 'f': 'ғ', 'g': 'ﾓ', 'h': '卄', 'i': '!!',
@@ -150,7 +150,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'crossed',
+  name: '13',
   map: {
     'a': 'a̶', 'b': 'b̶', 'c': 'c̶', 'd': 'd̶', 'e': 'e̶', 'f': 'f̶', 'g': 'g̶', 'h': 'h̶',
     'i': 'i̶', 'j': 'j̶', 'k': 'k̶', 'l': 'l̶', 'm': 'm̶', 'n': 'n̶', 'o': 'o̶', 'p': 'p̶', 'q': 'q̶',
@@ -161,7 +161,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'covered',
+  name: '14',
   map: {
     ' ': ' ',
     'a': 'a̺͆', 'b': 'b̺͆', 'c': 'c̺͆', 'd': 'd̺͆', 'e': 'e̺͆', 'f': 'f̺͆', 'g': 'g̺͆', 'h': 'h̺͆', 'i': 'i̺͆', 'j': 'j̺͆',
@@ -174,7 +174,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'smiley',
+  name: '15',
   map: {
     ' ': ' ',
     'A': 'Ă̈', 'B': 'B̆̈', 'C': 'C̆̈', 'D': 'D̆̈', 'E': 'Ĕ̈', 'F': 'F̆̈', 'G': 'Ğ̈', 'H': 'H̆̈', 'I': 'Ĭ̈', 'J': 'J̆̈',
@@ -187,7 +187,7 @@ const fontMaps = [
   },
 },
 {
-  name: 'boxed',
+  name: '16',
   map: {
     'a': '🄰', 'b': '🄱', 'c': '🄲', 'd': '🄳', 'e': '🄴', 'f': '🄵', 'g': '🄶', 'h': '🄷', 'i': '🄸', 'j': '🄹',
     'k': '🄺', 'l': '🄻', 'm': '🄼', 'n': '🄽', 'o': '🄾', 'p': '🄿', 'q': '🅀', 'r': '🅁', 's': '🅂', 't': '🅃',
@@ -201,9 +201,9 @@ const fontMaps = [
 
 module.exports = {
   config: {
-    name: 'font',
+    name: 'style',
     version: '1.0',
-    author: 'MR.AYAN',
+    author: 'BADBOY',
     countDown: 0,
     role: 0, // Set role to 0 for public access
     shortDescription: 'Convert text to different fonts',
@@ -215,7 +215,7 @@ module.exports = {
   onStart: async ({ event, api, args }) => {
     if (args.length === 1 && args[0].toLowerCase() === 'list') {
       const exampleText = 'Hello';
-      const header = '═════════════════   𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝙵𝚘𝚗𝚝𝚜 ƪ⁠(⁠‾⁠.⁠‾⁠“⁠)⁠┐\n═════════════════\n𝙵𝚘𝚗𝚝 𝙽𝚊𝚖𝚎       𝚂𝚊𝚖𝚙𝚕𝚎';
+      const header = '═════════════════   𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝘀𝘁𝘆𝗹𝗲 𝗳𝗼𝗻𝘁𝘀  \n═════════════════\n𝙵𝚘𝚗𝚝 type       𝚂𝚊𝚖𝚙𝚕𝚎';
 
       // Calculate the maximum length of the font names
       const maxFontNameLength = Math.max(...fontMaps.map(fontMap => fontMap.name.length));
@@ -227,7 +227,7 @@ module.exports = {
           .join('');
 
         // Adjust the padding for font names
-        const formattedFontName = `★ ${fontMap.name.padEnd(maxFontNameLength)}`;
+        const formattedFontName = `🐤  ${fontMap.name.padEnd(maxFontNameLength)}`;
 
         // Calculate the padding for perfect vertical alignment
         const padding = ' '.repeat(maxFontNameLength - fontMap.name.length);
@@ -244,7 +244,7 @@ module.exports = {
 
     if (args.length < 2) {
       return api.sendMessage(
-        "|｡_｡| Invalid Usage: Please use the command with a font type and text.\n\nExample: -font bold i love you \n\nChat -𝘧𝘰𝘯𝘵 𝘭𝘪𝘴𝘵 to see more! •ᴗ•",
+        "|｡_｡| Invalid Usage: Please use the command with a font type and text.\n\nExample: -font 1 i love you \n\nChat -𝘧𝘰𝘯𝘵 𝘭𝘪𝘴𝘵 to see more! •ᴗ•",
         event.threadID,
         event.messageID
       );
@@ -252,7 +252,7 @@ module.exports = {
 
     const command = args[0].toLowerCase();
     if (command === 'list') {
-      const availableFonts = fontMaps.map((fontMap) => `★ ${fontMap.name}`).join('\n');
+      const availableFonts = fontMaps.map((fontMap) => `🐤 ${fontMap.name}`).join('\n');
       return api.sendMessage(`Available fonts:\n${availableFonts}`, event.threadID, event.messageID);
     }
 
@@ -264,9 +264,9 @@ module.exports = {
     );
 
     if (!chosenFontMap) {
-      const availableFonts = fontMaps.map((fontMap) => `★ ${fontMap.name}`).join('\n');
+      const availableFonts = fontMaps.map((fontMap) => `🐤 ${fontMap.name}`).join('\n');
       return api.sendMessage(
-        `|｡_｡| Invalid Font Type: Available fonts:\n${availableFonts}\n\nExample: -font bold Hello! •ᴗ•`,
+        `Invalid Font Type: Available fonts:\n${availableFonts}\n\nExample: !font 1 Hello `,
         event.threadID,
         event.messageID
       );
