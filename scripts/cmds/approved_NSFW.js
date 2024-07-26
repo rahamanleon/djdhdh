@@ -52,7 +52,7 @@ module.exports = {
       } else {
         approvedIDs.splice(approvedIDs.indexOf(id), 1);
         fs.writeFileSync(approvedIDsPath, JSON.stringify(approvedIDs));
-        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use NSFW commands by BotAdmin.\n\nReason: ${reason}\nContact: 𝐀𝐒𝐈𝐅 𝐱𝟔𝟗 for more information.\nFB: https://facebook.com/4S1F.403\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
+        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use NSFW commands by BotAdmin.\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe007\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
         message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nThe thread ID has been removed from using NSFW commend\n\n╚════ஜ۩۞۩ஜ═══╝");
       }
 
@@ -69,7 +69,7 @@ module.exports = {
         // Remove from pending IDs list
         pendingIDs.splice(pendingIDs.indexOf(id), 1);
         fs.writeFileSync(pendingIDsPath, JSON.stringify(pendingIDs));
-        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️ Warning ⚠️\nYour thread ID's permission to use NSFW commands has been disapproved by BotAdmin.\n\nReason: ${reason}\nContact: 𝐀𝐒𝐈𝐅 𝐱𝟔𝟗 for more information.\nFB: https://www.facebook.com/rockexe07\n\njoin the support Box for fast reply\nType : ${p}support \nto join.\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
+        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️ Warning ⚠️\nYour thread ID's permission to use NSFW commands has been disapproved by BotAdmin.\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe007\n\njoin the support Box for fast reply\nType : ${p}support \nto join.\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
         message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nThe thread ID has been disapproved for using NSFW commands.\n\n╚════ஜ۩۞۩ஜ═══╝");
           }
 
