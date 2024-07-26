@@ -136,10 +136,10 @@ zinnia: "#DC9B9B",
 
 module.exports = {
   config: {
-    name: "hexcolor",
-    aliases: ['hex'],
+    name: "color",
+    aliases: ['clor'],
     version: "1.1",
-    author: "Samir Thakuri",
+    author: "BADBOY",
     coolDown: 5,
     role: 0,
     shortDescription: "Get Hexcolor code",
