@@ -10,9 +10,9 @@ module.exports = {
     name: "mistake",
     aliases: ["cm"],
     version: "2.0",
-    author: "MR.AYAN",
+    author: "BADBOY",
     countDown: 2,
-    role: 0,
+    role: 2,
     description: "𝗔 𝘀𝗺𝗮𝗹𝗹 𝗺𝗶𝘀𝘁𝗮𝗸𝗲", 
     category: "𝗙𝗨𝗡",
     guide: "{pn} (mention someone/uid/idurl/reply to a msg)"
