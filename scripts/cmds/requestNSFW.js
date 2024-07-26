@@ -9,7 +9,7 @@ module.exports = {
   config: {
     name: "requestnsfw",
     version: "1.1",
-    author: "SiAM",
+    author: "BADBOY",
     countDown: 5,
     category: "Utility",
     role: 0,
@@ -39,7 +39,7 @@ module.exports = {
     if (fs.existsSync(pendingIDsPath)) {
       const pendingIDs = JSON.parse(fs.readFileSync(pendingIDsPath));
       if (pendingIDs.includes(threadID)) {
-        const pendingMsg = `╔════ஜ۩۞۩ஜ═══╗\n\nYour request is already in pending.... \nPlease Contact: BADBOY for fast approval.\nFB: https://www.facebook.com/rockexe07\n\n or join the support box for help \nType : ${p}support or ${p}supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
+        const pendingMsg = `╔════ஜ۩۞۩ஜ═══╗\n\nYour request is already in pending.... \nPlease Contact: BADBOY for fast approval.\nFB: https://www.facebook.com/rockexe007\n\n or join the support box for help \nType : ${p}support or ${p}supportgc\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`;
         api.sendMessage(pendingMsg, threadID);
         return;
       }
