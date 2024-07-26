@@ -51,7 +51,7 @@ module.exports = {
       } else {
         approvedIDs.splice(approvedIDs.indexOf(id), 1);
         fs.writeFileSync(approvedIDsPath, JSON.stringify(approvedIDs));
-        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use main commands from bot by Admin.\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe07\n\n Also you can join support box for more info \nType: ${p}support\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
+        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️Warning ⚠️\nNow this Thread ID's permission has been disapproved or removed to use main commands from bot by Admin.\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe007\n\n Also you can join support box for more info \nType: ${p}support\nto join\n\n╚════ஜ۩۞۩ஜ═══╝`, id);
         message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nThe thread ID has been removed from using main commend\n\n╚════ஜ۩۞۩ஜ═══╝");
       }
 
@@ -68,7 +68,7 @@ module.exports = {
         // Remove from pending IDs list
         pendingIDs.splice(pendingIDs.indexOf(id), 1);
         fs.writeFileSync(pendingIDsPath, JSON.stringify(pendingIDs));
-        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️ Warning ⚠️\nYour thread ID's permission to use main commands from bot has been disapproved by Admin. all cmds will be locked\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe07\n\nor join the support box for more info \nType: ${p}support\nto join\n\n╚════ஜ۩۞۩ஜ═══╝ `, id);
+        api.sendMessage(`╔════ஜ۩۞۩ஜ═══╗\n\n⚠️ Warning ⚠️\nYour thread ID's permission to use main commands from bot has been disapproved by Admin. all cmds will be locked\n\nReason: ${reason}\nContact: BADBOY for more information.\nFB: https://www.facebook.com/rockexe007\n\nor join the support box for more info \nType: ${p}support\nto join\n\n╚════ஜ۩۞۩ஜ═══╝ `, id);
         message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nThe thread ID has been disapproved for using main commands.\n\n╚════ஜ۩۞۩ஜ═══╝");
           }
 
