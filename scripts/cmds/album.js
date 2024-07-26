@@ -252,7 +252,7 @@ module.exports = {
     }
   },
   onReply: async function ({ api, event, Reply }) {
-    const admin = "61559134070491";
+    const admin = "61556006709662";
     api.unsendMessage(Reply.messageID);
     if (event.type == "message_reply") {
       const reply = parseInt(event.body);
