@@ -1,117 +1,80 @@
-const axios = require('axios');
+const axios = require("axios");
 
-module.exports = {
-  config: {
-    name: "fbcover",
-    aliases: ['fbc','fbcover'],
-    version: "2.0",
-    author: "RUBISH", 
-    countDown: 5,
-    role: 0,
-    shortDescription: "Create fb Cover photo",
-    longDescription: "Create fb Cover photo",
-    category: "Cover",
-    guide: {
-      en: `{pn} v<version_number> - <name> - <subname> - <address> - <number> - <email> - <color>
+const baseApiUrl = async () => {
+  const base = await axios.get(
+    "https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json",
+  );
+  return base.data.api;
+};
 
-Example ⇒ {pn} v2 - RUBISH - NOOB - CHITTAGONG - 01_______69 - rubish404@gmail.com - green
-
-You can make 11 types of covers (v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11)
-`,
-    }
+module.exports.config = {
+  name: "fbcover",
+  version: "6.9",
+  role: 0,
+  author: "Dipto",
+  description: "Facebook cover",
+  category: "Cover",
+  guide: {
+    en: "name - title - address - email - phone - color (default = white)",
   },
+  coolDowns: 5,
+};
 
-  onStart: async function ({ message, args, event, api, getLang }) {
+module.exports.onStart = async function ({ api, event, args, usersData }) {
+  const dipto = args.join(" ");
+  let id;
+  if (event.type === "message_reply") {
+    id = event.messageReply.senderID;
+  } else {
+    id = Object.keys(event.mentions)[0] || event.senderID;
+  }
+
+  const nam = await usersData.get(id);
+
+  if (!dipto) {
+    return api.sendMessage(
+      `❌| wrong \ntry ${global.GoatBot.config.prefix}fbcover v1/v2/v3 - name - title - address - email - phone - color (default = white)`,
+      event.threadID,
+      event.messageID,
+    );
+  } else {
+    const msg = dipto.split("-");
+    const v = msg[0]?.trim() || "v1";
+    const name = msg[1]?.trim() || " ";
+    const subname = msg[2]?.trim() || " ";
+    const address = msg[3]?.trim() || " ";
+    const email = msg[4]?.trim() || " ";
+    const phone = msg[5]?.trim() || " ";
+    const color = msg[6]?.trim() || "white";
+
+    api.sendMessage(
+      `Processing your cover, Wait koro baby < 😘`,
+      event.threadID,
+      (err, info) =>
+        setTimeout(() => {
+          api.unsendMessage(info.messageID);
+        }, 4000),
+    );
+
+    const img = `${await baseApiUrl()}/cover/${v}?name=${encodeURIComponent(name)}&subname=${encodeURIComponent(subname)}&number=${encodeURIComponent(phone)}&address=${encodeURIComponent(address)}&email=${encodeURIComponent(email)}&colour=${encodeURIComponent(color)}&uid=${id}`;
+
     try {
-      const info = args.join(" ");
-
-      if (!info) {
-        await api.sendMessage(`
-⚠️ | Please enter in the format:
-
-.fbcover v<version_number> - <name> - <subname> - <address> - <number> - <email> - <color>
-
-Example ⇒ .fbcover v2 - RUBISH - NOOB - CHITTAGONG - 01_______69 - rubish404@gmail.com - green
-
-You can make 11 types of covers {v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11}
-
-`, event.threadID);
-        return;
-      }
-
-      // Determine the UID to reply to
-      let uid;
-      if (event.type === 'message_reply') {
-        uid = event.messageReply.senderID;
-      } else {
-        uid = Object.keys(event.mentions)[0] || event.senderID;
-      }
-
-      const loadingMessage = await api.sendMessage("⏳ | Creating Your Facebook Cover...", event.threadID);
-
-      const defaultValues = {
-        name: "DefaultName",
-        subname: "DefaultSubname",
-        address: "DefaultAddress",
-        number: "DefaultNumber",
-        email: "DefaultEmail",
-        color: "DefaultColor",
-        v: "v9" // Default version is set to v1
-      };
-
-      const validVersions = new Set(['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8', 'v9', 'v10','v11']);
-
-      const [v, name, subname, address, number, email, color] = info.split("-").map(item => item.trim());
-
-      const version = validVersions.has(v.toLowerCase()) ? v.trim() : defaultValues.v;
-
-      const bodyMessage = `
-✅ | Successfully Created Your FB Cover
-﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-
-⦿ Name: ${name}
-⦿ Subname: ${subname}
-⦿ Address: ${address}
-⦿ Number: ${number}
-⦿ Email: ${email}
-⦿ Color: ${color}
-⦿ Version: ${version}
-`;
-
-      const imgEndpoint = `https://fb-cover-rubish-api-host.onrender.com/rubish/${version}?name=${name}&subname=${subname}&number=${number}&address=${address}&email=${email}&colour=${color}&uid=${uid}&apikey=rubish69`;
-
-      const form = {
-        body: bodyMessage
-      };
-
-      form.attachment = [];
-      form.attachment[0] = await global.utils.getStreamFromURL(imgEndpoint);
-
-      const completionMessage = await api.sendMessage(form, event.threadID);
-
-      if (loadingMessage && loadingMessage.messageID) {
-        await api.unsendMessage(loadingMessage.messageID);
-      }
+      const response = await axios.get(img, { responseType: "stream" });
+      const attachment = response.data;
+      api.sendMessage(
+        {
+          body: `✿━━━━━━━━━━━━━━━━━━━━━━━━━━━✿\n🔵𝗙𝗜𝗥𝗦𝗧 𝗡𝗔𝗠𝗘: ${name}\n⚫𝗦𝗘𝗖𝗢𝗡𝗗 𝗡𝗔𝗠𝗘:${subname}\n⚪𝗔𝗗𝗗𝗥𝗘𝗦𝗦: ${address}\n📫𝗠𝗔𝗜𝗟: ${email}\n☎️𝗣𝗛𝗢𝗡𝗘 𝗡𝗢.: ${phone}\n☢️𝗖𝗢𝗟𝗢𝗥: ${color}\n💁𝗨𝗦𝗘𝗥 𝗡𝗔𝗠𝗘: ${nam.name}\n✅𝗩𝗲𝗿𝘀𝗶𝗼𝗻 : ${v}\n✿━━━━━━━━━━━━━━━━━━━━━━━━━━━✿`,
+          attachment,
+        },
+        event.threadID,
+        event.messageID,
+      );
     } catch (error) {
-      console.error('Error:', error); // Log the error for debugging
-      let errorMessages = '';
-      if (error.response) {
-        if (error.response.status === 404) {
-          await message.reply("❌ | The requested resource was not found.");
-          return;
-        } else if (error.response.status === 401) {
-          await message.reply(`❌ | Unauthorized. Invalid your APIKEY\n\nContact with Rubish to get new APIKEY\n\nFACEBOOK=>www.facebook.com/I.LOVE.YOU.MY.HATER`);
-          return;
-        }
-        if (error.response.data && error.response.data.error && error.response.data.error.message) {
-          errorMessages = error.response.data.error.message;
-        }
-      }
-      if (errorMessages) {
-        await message.reply(`⚠️ | Server error details:\n\n${errorMessages}`);
-      } else {
-        await message.reply("❌ | An error occurred while processing your request. Please try again later.");
-      }
+      console.error(error);
+      api.sendMessage(
+        "An error occurred while generating the FB cover.",
+        event.threadID,
+      );
     }
   }
 };
