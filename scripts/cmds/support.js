@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     name: "support",
-    aliases: ["supportgc", "gc", "joingc"],
+    aliases: ["supportgc"],
     version: "1.0",
     author: "MR.AYAN",
     countDown: 5,
