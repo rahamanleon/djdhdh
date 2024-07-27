@@ -25,10 +25,10 @@ module.exports = {
 
   langs: {
     en: {
-      turnedOn: "Turned on the mode only whiteListThreadIds can use bot",
-      turnedOff: "Turned off the mode only whiteListThreadIds can use bot",
-      turnedOnNoti: "Turned on the notification when thread is not whiteListThreadIds",
-      turnedOffNoti: "Turned off the notification when thread is not whiteListThreadIds"
+      turnedOn: "✅ Turned on the mode only whiteListThreadIds can use bot",
+      turnedOff: "✅ Turned off the mode only whiteListThreadIds can use bot",
+      turnedOnNoti: "✅ Turned on the notification when thread is not whiteListThreadIds",
+      turnedOffNoti: "✅ Turned off the notification when thread is not whiteListThreadIds"
     }
   },
 
