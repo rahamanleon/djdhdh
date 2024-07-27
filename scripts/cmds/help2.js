@@ -7,7 +7,7 @@ const doNotDelete = "[ 𝙔𝙤𝙪𝙧 𝘽𝙖𝙗𝙮 ]"; // changing this wo
 
 module.exports = {
   config: {
-    name: "help",
+    name: "help2",
     version: "1.17",
     author: "𝘽𝘼𝘿𝘽𝙊𝙔", 
     countDown: 10,
