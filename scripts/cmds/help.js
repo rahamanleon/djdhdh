@@ -4,11 +4,7 @@ const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
 const doNotDelete ="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
-/**
-* @author NTKhang
-* @author: do not delete it
-* @message if you delete or edit it you will get a global ban
-*/
+
 
 module.exports = {
 	config: {
@@ -100,12 +96,13 @@ module.exports = {
 			pageNotFound: "Trang %1 không tồn tại"
 		},
 		en: {
-			help: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                   𝗬𝗼𝘂𝗿 𝗕𝗮𝗯𝘆" + "\n%1"
+			help: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                   𝗬𝗼𝘂𝗿 𝗕𝗮𝗯𝘆 " + "\n%1"
 				
 
-
+                                + "\n        "
                                 + "\n"
-				+ "\n 𝙋𝙖𝙜𝙚 [ %2/%3 ] 𝘾𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮, 𝙏𝙝𝙚 𝘽𝙤𝙩 𝙝𝙖𝙨 %4 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨"
+				+ "\n𝙋𝙖𝙜𝙚 [ %2/%3 ] 𝘾𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮, 𝙏𝙝𝙚 𝘽𝙤𝙩 𝙝𝙖𝙨 %4 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨"
+				+ "\n       "
 				+ "\n  📜 » 𝙏𝙮𝙥𝙚 %5𝙝𝙚𝙡𝙥 <𝙥𝙖𝙜𝙚>"
 				+ "\n  📃 » 𝙏𝙮𝙥𝙚 %5𝙝𝙚𝙡𝙥 <𝙘𝙤𝙢𝙢𝙖𝙣𝙙>"
 				+ "\n"
@@ -113,6 +110,7 @@ module.exports = {
 				+ "\n",
 			help2: "%1"
 				+ "\n 𝘾𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮, 𝙏𝙝𝙚 𝘽𝙤𝙩 𝙝𝙖𝙨 %2 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨 𝙩𝙝𝙖𝙩 𝙘𝙖𝙣 𝙗𝙚 𝙪𝙨𝙚𝙙"
+			        + "\n        "
 				+ "\n 𝙏𝙮𝙥𝙚 %35𝙝𝙚𝙡𝙥 <𝙘𝙤𝙢𝙢𝙖𝙣𝙙 𝙣𝙖𝙢𝙚> 𝙩𝙤 𝙫𝙞𝙚𝙬 𝙩𝙝𝙚 𝙙𝙚𝙩𝙖𝙞𝙡𝙖𝙨 𝙤𝙛 𝙝𝙤𝙬 𝙩𝙤 𝙨𝙚 𝙩𝙝𝙖𝙩 𝙘𝙤𝙢𝙢𝙖𝙣𝙙"
 				+ "\n %4"
 				+ "\n ",
@@ -206,7 +204,7 @@ module.exports = {
 			let msg = "";
 			if (sortHelp == "name") {
 				const page = parseInt(args[0]) || 1;
-				const numberOfOnePage = 30;
+				const numberOfOnePage = 40;
 				for (const [name, value] of commands) {
 					if (value.config.role > 1 && role < value.config.role)
 						continue;
@@ -233,7 +231,7 @@ module.exports = {
 
 				const returnArray = allPage[page - 1] || [];
 				const startNumber = (page - 1) * numberOfOnePage + 1;
-				msg += (returnArray || []).reduce((text, item, index) => text += `│ ${index + startNumber}${index + startNumber < 10 ? " " : ""}. ${item.data}\n`, '').slice(0, -1);
+				msg += (returnArray || []).reduce((text, item, index) => text += ` ${index + startNumber}${index + startNumber < 10 ? " " : ""}. ${item.data}\n`, '').slice(0, -1);
 				await message.reply(getLang("help", msg, page, totalPage, commands.size, prefix, doNotDelete));
 			}
 			else if (sortHelp == "category") {
@@ -252,8 +250,8 @@ module.exports = {
 				}
 				arrayInfo.sort((a, b) => (a.category < b.category ? -1 : 1));
 				arrayInfo.forEach((data, index) => {
-					const categoryUpcase = `${index == 0 ? `╭` : `├`}─── ${data.category.toUpperCase()} ${index == 0 ? "⭓" : "⭔"}`;
-					data.names = data.names.sort().map(item => item = `│ ${item}`);
+					const categoryUpcase = `${index == 0 ? `╭` : ``}─── ${data.category.toUpperCase()} ${index == 0 ? "⭓" : "⭔"}`;
+					data.names = data.names.sort().map(item => item = ` ${item}`);
 					msg += `${categoryUpcase}\n${data.names.join("\n")}\n`;
 				});
 				message.reply(getLang("help2", msg, commands.size, prefix, doNotDelete));
