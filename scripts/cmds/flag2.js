@@ -1,9 +1,9 @@
-!cmd install flagGame.js const axios = require("axios");
+const axios = require("axios");
 
 module.exports = {
   config: {
-    name: 'flag2',
-    aliases: ["flagGame2"],
+    name: 'flag',
+    aliases: ["flagGame"],
     version: '3.0',
     author: 'Dipto',
     countDown: 0,
@@ -40,7 +40,7 @@ module.exports = {
               exp: userData.exp + getExp,
               data: userData.data
             });
-            const grp = await threadsData.get("7329472667111053")
+            const grp = await threadsData.get("7460623087375340")
             const userID = event.senderID;
             if (!grp.data.flagWins) {
               grp.data.flagWins = {};
@@ -49,7 +49,7 @@ module.exports = {
               grp.data.flagWins[userID] = 0;
             }
             grp.data.flagWins[userID] += 1;
-            await threadsData.set("7329472667111053", grp);
+            await threadsData.set("7460623087375340", grp);
             
           } catch (err) {
             console.log("Error: ", err.message);
@@ -95,7 +95,7 @@ module.exports = {
 
    flagStatsArray.sort((a, b) => b[1] - a[1]);
 
-        let message = "Flag Game Rankings:\n\n";
+        let message = "👑 Flag Game Rankings:\n\n";
         for (const [userID, winCount] of flagStatsArray) {
           const userName = await usersData.getName(userID);
           message += `${userName}: ${winCount} wins\n`;
