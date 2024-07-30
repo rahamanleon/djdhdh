@@ -23,10 +23,10 @@ async function getAvatarUrls(userIDs) {
 }
 module.exports = {
     config: {
-        name: "gcimg",
-        aliases: ["gcimage", "grpimage"],
+        name: "groupimage",
+        aliases: ["gcimage", "gcimg"],
         version: "1.0",
-        author: "Dipto",
+        author: "BADBOY",
         countDown: 5,
         role: 2,
         description: "𝗚𝗲𝘁 𝗚𝗿𝗼𝘂𝗽 𝗜𝗺𝗮𝗴𝗲",
