@@ -9,8 +9,8 @@ module.exports = {
 		author: "𝗕𝗔𝗗𝗕𝗢𝗬 彡",
 		countDown: 2,
 		role: 0,
-		shortDescription: "pairdp",
-		longDescription: "cdp",
+		shortDescription: "copule dp",
+		longDescription: "random nibba nibbi copule dp",
 		category: "image",
 		guide: "{pn}"
 	}, 
@@ -26,7 +26,7 @@ module.exports = {
 		attachments.push(await global.utils.getStreamFromURL(maleLink));
 		attachments.push(await global.utils.getStreamFromURL(femaleLink));
 		message.send({
-			body: 'cdp',
+			body: '𝗣𝗮𝗶𝗿~𝗗𝗣😙🫶',
 			attachment: attachments
 		});
 	}
