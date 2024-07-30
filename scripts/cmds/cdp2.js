@@ -3,10 +3,10 @@ const fs = require("fs-extra");
 
 module.exports = {
  config: {
- name: "copuledp",
- aliases: ["cdp"],
+ name: "copuledp2",
+ aliases: ["cdp2","pairdp2"],
  version: "1.0",
- author: "XyryllPanget",
+ author: "BADBOY ",
  countDown: 5,
  role: 0,
  shortDescription: {
