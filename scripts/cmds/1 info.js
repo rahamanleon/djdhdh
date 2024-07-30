@@ -3,8 +3,7 @@ const moment = require('moment-timezone');
 
 module.exports = {
   config: {
-    name: "information",
-    aliases: ["info", "botinfo", "babyinfo"],
+    name: "info",
     version: "2.0",
     author: "𝗕𝗔𝗗𝗕𝗢𝗬",
     countDown: 5,
