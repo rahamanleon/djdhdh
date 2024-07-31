@@ -15,8 +15,8 @@ module.exports = {
   config: {
     name: "shortreact",
     category: "utility",
-    role: 2,
-    author: "Allou Mohamed"
+    role: 0,
+    author: "BADBOY"
   },
 
   onChat: async function({ message, event }) {
